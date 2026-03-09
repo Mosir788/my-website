@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mosir Tech Solutions</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f4f4f4;
+}
+
+/* LOGIN PAGE */
+
+.login-container{
+width:320px;
+margin:120px auto;
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+text-align:center;
+}
+
+.login-container input{
+width:90%;
+padding:10px;
+margin:10px 0;
+}
+
+.login-container button{
+background:#007BFF;
+color:white;
+border:none;
+padding:10px 20px;
+cursor:pointer;
+border-radius:5px;
+}
+
+/* WEBSITE */
+
+#website{
+display:none;
+}
+
+/* HEADER */
+
+header{
+background:#222;
+color:white;
+padding:15px;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:20px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(to right,#007BFF,#00c6ff);
+color:white;
+padding:80px 20px;
+text-align:center;
+}
+
+/* SECTIONS */
+
+.container{
+padding:40px;
+}
+
+.cards{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+flex:1;
+min-width:200px;
+}
+
+/* CONTACT */
+
+.contact input,
+.contact textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+
+.contact button{
+background:#007BFF;
+color:white;
+border:none;
+padding:10px 20px;
+}
+
+/* FOOTER */
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+
+<div class="login-container">
+<h2>Login</h2>
+
+<input type="text" id="username" placeholder="Username">
+<input type="password" id="password" placeholder="Password">
+
+<br>
+<button onclick="login()">Login</button>
+
+<p id="error" style="color:red"></p>
+
+</div>
+
+
+<!-- WEBSITE -->
+
+<div id="website">
+
+<header>
+<nav>
+<h2>Mosir Tech</h2>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+
+<section class="hero">
+<h1>Welcome to Mosir Tech Solutions</h1>
+<p>Cloud | DevOps | Software Testing</p>
+</section>
+
+
+<section class="container" id="services">
+
+<h2>Our Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Web Development</h3>
+<p>We create modern and responsive websites.</p>
+</div>
+
+<div class="card">
+<h3>Cloud Hosting</h3>
+<p>Deploy your applications on AWS cloud.</p>
+</div>
+
+<div class="card">
+<h3>Software Testing</h3>
+<p>Manual, Automation and API testing services.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="container contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea placeholder="Your Message"></textarea>
+
+<button>Send Message</button>
+
+</section>
+
+
+<footer>
+<p>© 2026 Mosir Khan | Professional Demo Website</p>
+</footer>
+
+</div>
+
+
+<script>
+
+function login(){
+
+var user=document.getElementById("username").value;
+var pass=document.getElementById("password").value;
+
+if(user=="admin" && pass=="1234"){
+
+document.querySelector(".login-container").style.display="none";
+document.getElementById("website").style.display="block";
+
+}
+else{
+
+document.getElementById("error").innerHTML="Invalid Username or Password";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
